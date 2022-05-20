@@ -18,6 +18,10 @@ body {
     font-family: var(--font-family-base);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+}
+
 li.nav-item a {
     color: #161616;
 }
@@ -31,8 +35,4 @@ li.nav-item a {
 }
 .section-tagline {
     color: var(--color-primary);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-title);
 }

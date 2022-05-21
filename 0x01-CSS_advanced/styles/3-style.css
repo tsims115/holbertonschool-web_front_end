@@ -15,8 +15,8 @@ body {
     color: var(--text-color);
 }
 
-li.nav-item a {
-    color: #161616;
+a {
+    color: var(--text-color);
 }
 
 .visually-hidden {

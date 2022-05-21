@@ -22,12 +22,12 @@
     --section-header-align: center;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
-    --section-padding: 5rem, 0;
-    --section-header-padding: 0, 0, 3rem;
-    --section-body-padding: 0, 0, 3rem;
-    --section-footer-padding: 3rem, 0, 0;
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
-    --footer-padding: 5rem, 0, 1rem;
+    --footer-padding: 5rem 0 1rem;
 }
 
 *, *:before, *:after {
@@ -97,10 +97,10 @@ a:active {
 
 .section-title {
     font-family: var(--font-family-title);
-     font-size: var(--font-size-xx-large);
-     font-weight: var(--font-weight-bold);
-     margin: var(--section-title-margin);
-     color: var(--section-title-color);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
 }
 
 .section-tagline {

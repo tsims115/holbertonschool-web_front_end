@@ -73,7 +73,7 @@ html {
 .header-logo a {
     display: var(--header-logo-link-display);
     position: var(--header-logo-link-position);
-    object-position: var(--header-logo-link-left) var(--header-logo-link-top);
+    object-position: var(--header-logo-link-top) var(--header-logo-link-left);
 }
 
 body {

@@ -1,0 +1,1 @@
+# Dir for responsive design

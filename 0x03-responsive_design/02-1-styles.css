@@ -224,11 +224,11 @@
     --section-body-padding: 2rem 0 0;
   }
   
-  ul.row .row {
+  ul.row, .row {
     flex-direction: column;
     margin: 0;
   }
-  [class^="col-"] {
+  [class*="col-"] {
     margin: 0 0 3rem 0;
   }
 

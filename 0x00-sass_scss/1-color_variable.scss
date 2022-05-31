@@ -1,0 +1,10 @@
+/* assigns color to all html body and p tags */
+$body-color: #3D3D3D;
+
+body {
+    color: $body-color; 
+}
+  
+p {
+    color: $body-color;
+}

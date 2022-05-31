@@ -1,0 +1,13 @@
+/* Task 8 SCSS files */
+@mixin theme($theme: 10px) {
+    margin-left: $theme;
+    margin-right: $theme;
+}
+
+body {
+    @include theme
+}
+
+div {
+    @include theme($theme: 15px)
+}

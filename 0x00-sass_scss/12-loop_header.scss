@@ -1,0 +1,6 @@
+/* Task 12 create h* */
+@for $i from 1 through 5 {
+    h#{$i} {
+        font-size: ($i) * 1px;
+    }
+}

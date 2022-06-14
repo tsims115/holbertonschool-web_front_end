@@ -717,11 +717,11 @@
 .form-group {
   padding: 1rem;
   margin: 0;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-white);
 }
 
 .form-group:focus-within {
-  background-color: var(--color-white);
+  background-color: var(--color-light-grey);
   transition: .3s;
 }
 

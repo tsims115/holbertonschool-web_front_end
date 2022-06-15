@@ -667,7 +667,7 @@
     display: block;
     text-decoration: none;
     padding-top: 45%;
-    opacity: 1;
+    opacity: 0;
   }
 
   .card-work .card-title a:hover, .card-work:hover .card-title a {

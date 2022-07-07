@@ -11,21 +11,21 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <div>
-            <h1>Bob Dylan</h1>
+    <body class="bg-dark">
+        <div class="container-lg bg-light p-sm">
+            <h1 class="mt-md mb-md">Bob Dylan</h1>
 
-            <ul>
-                <li>
-                    <a>Introduction</a>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#bob-intro" role="tab" aria-controls="bob-intro" aria-selected="true">Introduction</a>
                 </li>
-                <li>
-                    <a>Discography</a>
+                <li class="nav-item"></li>
+                    <a class="nav-link" data-toggle="tab" href="#bob-disc"role="tab" aria-controls="bob-disc" aria-selected="true" >Discography</a>
                 </li>
             </ul>
-            <div>
+            <div class="container tab-content">
 
-                <div>
+                <div class="tab-pane active" id="bob-intro">
                     <p>
                         Bob Dylan (born Robert Allen Zimmerman; May 24, 1941) is an American singer-songwriter, author, and visual artist who has been a major figure in popular culture for more than fifty years. 
                     </p>
@@ -35,7 +35,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="conatiner tab-pane fade" id="bob-disc">
                     <ul>
                         <li>
                             <a>Bob Dylan <em>(1962)</em></a>

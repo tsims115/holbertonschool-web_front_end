@@ -15,6 +15,11 @@ a, a:hover, a:focus {
     color: #E0003C;
 }
 
+.card-header {
+    background-color: #E0003C;
+    color: white;
+}
+
 [class*="card-"] {
     border-color: #E0003C;
     border-radius: 1rem;

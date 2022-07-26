@@ -11,17 +11,18 @@
     <body>
         <script type="application/javascript">
             function createFamilyTree() {
-                $("body").append("<table><tbody></tbody></table>");
-                $("tbody").append("<tr><th>FirstName</th><th>LastName</th></tr>");
+                $("body").append("<table><thead></thead></table>");
+                $("table").append("<tbody></tbody>");
+                $("thead").append("<tr><th>FirstName</th><th>LastName</th></tr>");
                 $("tbody").append("<tr><td>FirstName</td><td>LastName</td></tr>");
                 $("tbody").append("<tr><td>FirstName</td><td>LastName</td></tr>");
                 $("tbody").append("<tr><td>FirstName</td><td>LastName</td></tr>");
             }
             function replaceFamilyTree() {
-                
+                $('table tbody').html("<tr><td>Gerard</td><td>Bonissa</td></tr>");
             }
-            replaceFamilyTree();
             createFamilyTree();
+            replaceFamilyTree();
         </script>
     </body>
 

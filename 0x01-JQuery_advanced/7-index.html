@@ -13,8 +13,31 @@
             function createSearchForm() {
                 $('body').append('<input type="text">');
                 $('body').append('<input type="submit">');
-                $(':submit').click(queryWikipedia($('input:text')));
+                $('input:nth-of-type(2)').click(function() {queryWikipedia($('input:text').val())});
+                $('body').append('<ul></ul>');
             }
+            function addNewArticle(id, title, snippet) {
+                $('ul').append(`
+                    <li>
+                        <p><span>${id}</span><b>${title}</b></p>
+                        <p>${snippet}</p>
+                    </li>
+                `);
+            }
+            function queryWikipedia(search) {
+                
+                $.ajax({url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Craig%20Noone&format=json",
+                        type: "GET",
+                        error: function(result) {
+                            alert("Error");
+                        },
+                        success: function(result){
+                                    alert("hello");
+                                    alert(result);
+                                    $("ul").html(result);
+                                }});
+            }
+            createSearchForm();
         </script>
     </body>
 </html>

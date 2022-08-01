@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "title": "b",
+      "author": "Trent",
+      "id": 5
+    },
+    {
+      "title": "f",
+      "author": "Carl",
+      "id": 9
+    },
+    {
+      "author": "",
+      "title": "",
+      "id": 11
+    },
+    {
+      "author": "",
+      "title": "",
+      "id": 13
+    },
+    {
+      "author": "Trent",
+      "title": "Sims",
+      "id": 14
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

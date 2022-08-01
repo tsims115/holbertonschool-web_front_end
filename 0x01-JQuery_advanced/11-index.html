@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 5</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+    </head>
+
+    <body>
+        <script>
+            function addPostRow(data) {
+                $('body').append(`
+                <p><span>
+                    Post created with id ${data.id}, title: ${data.title}, author: ${data.author}
+                </span></p>`);
+            }
+            function listPosts() {
+                jQuery.get("http://localhost:3000/posts",
+                function(result, state, status) {
+                    if (status.status === 200) {
+                        for (let i = 0; i < result.length;i++) {
+                            addPostRow(result[i]);
+                        }
+                    } else {
+                        alert("Server Error");
+                    }
+                });
+            }
+            function buildForm() {
+                $('body').append('<form></form>');
+                $('form').append("<div></div>");
+                $('form div').append("<label for='author'>Author</label><input id='author' type='text'></input>")
+                $('form').append("<div></div>");
+                $('form div:nth-child(2)').append("<label for='title'>Title</label><input id='title' type='textarea'></input>")
+                $('form').append("<input type='submit'></input>");
+                $(':submit').click(sendForm);
+            }
+            function sendForm() {
+                $('form').after("About to send the query to the API");
+                let data = {
+                    author: $('#author').val(),
+                    title: $('#title').val(),
+                }
+                $.ajax({
+                    url: "http://localhost:3000/posts",
+                    type: "POST",
+                    data: data,
+                    success: (result, state, status) => {
+                        alert("success");
+                        addPostRow(data);
+                    },
+                    error: () => {alert('Error sending the POST query')}
+                });
+                alert();
+            }
+            $(document).ready(() => {
+                listPosts();
+                buildForm();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Cookies - Task 0</title>
+        <meta name="description" content="Cookies are good">
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    </head>
+    <body>
+        <script type="application/javascript">
+            let availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+            if (typeof(Storage)) 
+            {
+                createStore();
+                displayCart();
+            } else {
+                alert('Sorry, your browser does not support Web storage. Try again with a better one');
+            }
+            function addItemToCart(item) {
+                localStorage.setItem(item, true);
+            }
+            function createStore() {
+                let ul = document.createElement("ul");
+                document.body.append(ul);
+                for (let i = 0; i < availableItems.length; i++) 
+                {
+                    let item = document.createElement("li");
+                    item.innerHTML = availableItems[i];
+                    item.onclick = () => {
+                        addItemToCart(availableItems[i]);
+                    }
+                    document.getElementsByTagName("ul")[0].append(item);
+                }
+            }
+            function displayCart() {
+                if (localStorage.length !== 0) {
+                    let p = document.createElement("p");
+                    p.innerHTML = `You previously had ${localStorage.length} items in your cart`;
+                    document.body.append(p);
+                }
+
+            }
+        </script>
+    </body>
+</html>
